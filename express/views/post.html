@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/public/lib/bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/public/css/post.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div class="container title">
+                
+                <h1><a href="/">返回留言板</a><small>留言</small></h1>
+           
+            </div>
+                    
+                    
+                    
+            <form method="post" action="/post">
+                <p>姓名</p>
+                    
+                <input type="text" name="name" id="inputinputName" class="form-control" value="" required="required">
+                            
+                <p>内容</p>
+                    
+                <textarea name="message" id="inputinputArea" class="form-control" rows="5" required="required"></textarea>
+        
+                    
+                <button type="submit" class="btn btn-large btn-success">提交</button>
+            </form>
+            
+
+            
+        </div>
+        
+    </body>
+</html>
