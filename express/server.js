@@ -9,7 +9,7 @@ let comments = [];
 
 app.use('/public/', express.static('./public/'));                   //请求内部的资源，随便用
 
-app.engine('html', require('express-art-template'));               //配置模板引擎
+app.engine('html', require('express-art-template'));               //配置模板引擎,不进行配置则文件无法解析
 
 /* 解析post中的数据专用 */
 app.use(bodyParser.urlencoded({extended : false}));
