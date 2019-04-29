@@ -32,7 +32,6 @@ router.get('/students/new', (req, res) => {
 });
 
 router.post('/students/new', (req, res) => {                             //文件存储方式是字符串
-    let student = req.body;
     new Students(req.body).save(err => {
         if(err){
             return res.status(500).send('Server err');
@@ -42,7 +41,7 @@ router.post('/students/new', (req, res) => {                             //文�
 });
 
 router.get('/students/delete', (req, res) => {
-    Students.findByIdAndRemove(req.query.id.replace(/\"/g, ''), err => {
+    Students.findByIdAndDelete(req.query.id.replace(/\"/g, ''), err => {
         if(err){
             return res.status(500).send('Server err');
         }
